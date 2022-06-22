@@ -1,13 +1,279 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <title>Барбершоп «Бородинский»</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
-<body class="page__body">
+  <html class="page" lang="ru">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>Drink2Go — это интернет-магазин по продаже кофейных напитков.</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <link rel="preload" href="fonts/montserrat.woff2" as="font" crossorigin="anonymous">
+      <link rel="preload" href="fonts/montserratbold.woff2" as="font" crossorigin="anonymous">
+      <link rel="preload" href="css/style.min.css">
+      <link rel="preload" href="js/script.js" as="script">
+    </head>
 
-<script src="js/script.js"></script>
-</body>
-</html>
+    <body class="page__body">
+      <header class="page-header">
+        <div class="page-header--wrapper">
+          <a class="page-header__link" href="#" aria-label="На главную страницу">
+          <!-- Здесь вставить несколько .svg по спрайту и соответствующим классам в зависимости от --visible-устройство -->
+          </a> 
+          <!-- Можно добавить класс page-nav--closed -->
+          <!-- Можно добавить класс page-nav--opened -->
+          <!-- Можно добавить класс page-nav--nojs -->
+          <nav class="page-nav">
+            <div class="page-nav__wrapper">
+              <div class="page-nav__logo">
+                <button class="page-nav__toggle" type="button">
+                  <span class="visually-hidden">Открыть меню</span>
+                </button>
+                <span class="page-nav__description">Интернет-магазин
+                  кофейных напитков
+                </span>
+              </div>
+              <ul class="page-nav__list page-nav__list--user">
+                <li class="page-nav__item">
+                  <a class="page-nav__link" href="#" aria-label="Войти">
+                    <!-- Вставить спрайтом .svg -->
+                    <span class="page-nav__text page-nav__text--desktop">Войти</span>
+                  </a>
+                </li>
+                <li class="page-nav__item">
+                  <a class="page-nav__link" href="#" aria-label="Войти">
+                    <!-- Вставить спрайтом .svg -->
+                    <span class="page-nav__text page-nav__text--desktop">Корзина</span>
+                  </a>
+                </li>
+              </ul>
+              <ul class="page-nav__list page-nav__list--sections">
+                <li class="page-nav__item">
+                  <a class="page-nav__link" href="#">
+                    <span class="page-nav__text">Главная</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="page-nav__link" href="#">
+                    <span class="page-nav__text">Каталог</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="page-nav__link" href="#">
+                    <span class="page-nav__text">Доставка</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="page-nav__link" href="#">
+                    <span class="page-nav__text">О нас</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <main class="page-main">
+        <h1 class="visually-hidden">Интернет-магазин кофейных напитков</h1>
+
+        <section class="main-header">
+          <div class="main-header__wrapper">
+            <picture>
+              <!-- Вставить ретиновые и дефолтные изображения -->
+            </picture>
+            <ul class="main-header__list">
+              <li class="main-header__item main-title">Новинка!</li>
+              <li class="main-header__item main-header__item--name">Декаф Флэт Уайт</li>
+              <li class="main-header__item main-header__item--property">
+                Свежесваренный кофе без кофеина из Эфиопии
+                с натуральным фермерским молоком — то, что нужно
+                для расслабления после тяжёлого рабочего дня</li>
+              <li class="main-header__item main-header__item--price">
+                <span class="main-header__old-price">295₽</span>
+                <span class="main-header__new-price">225₽</span>
+              </li>
+              <li class="main-header__item main-header__item--button">
+                <a class="main-header__button" href="#">
+                  <span class="main-header__button-text">Заказать</span>
+                </a>
+              </li>
+            </ul>
+            <p class="main-header__toggles">
+              <button class="main-header__toggle main-header__toggle--left" type="button">
+                <span class="visually-hidden">Предыдущий напиток</span>
+                <!-- Вставить спрайтом .svg -->
+              </button>
+              <button class="main-header__toggle main-header__toggle--right" type="button">
+                <span class="visually-hidden">Следующий напиток</span>
+                <!-- Вставить спрайтом .svg -->
+              </button>
+              <ul class="main-header__switchers">
+                <li class="main-header__switch">
+                  <span class="visually-hidden">Первый</span>
+                </li>
+                <li class="main-header__switch">
+                  <span class="visually-hidden">Второй</span>
+                </li>
+                <li class="main-header__switch">
+                  <span class="visually-hidden">Третий</span>
+                </li>
+              </ul>
+            </p>
+          </div>
+        </section>
+
+        <section class="main-advantages">
+          <div class="main-advantages__wrapper">
+            <h2 class="main-advantages__title main-title">Преимущества</h2>
+            <p class="main-advantages__header main-attention">Главные причины выбрать Drink2Go</p>
+            <ul class="main-advantages__list">
+              <li class="main-advantages__item main-advantages__item--speed">
+                <h3 class="main-advantages__caption">Скорость</h3>
+                <p class="main-advantages__text">Готовый напиток всегда под рукой — просто открой банку</p>
+              </li>
+              <li class="main-advantages__item main-advantages__item--convenience">
+                <h3 class="main-advantages__caption">Удобство</h3>
+                <p class="main-advantages__text">Легко помещается и в карман, и в маленькую сумочку</p>
+              </li>
+              <li class="main-advantages__item main-advantages__item--cheerfulness">
+                <h3 class="main-advantages__caption">Бодрость</h3>
+                <p class="main-advantages__text">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+              </li>
+              <li class="main-advantages__item main-advantages__item--ecological">
+                <h3 class="main-advantages__caption">Экологичность</h3>
+                <p class="main-advantages__text">Вся упаковка сделана из перерабатываемых материалов</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="main-catalog">
+          <div class="main-catalog__wrapper">
+            <h2 class="main-catalog__title main-title">Каталог</h2>
+            <p class="main-catalog__header main-attention">Каталог кофейных напитков</p>
+            <div class="main-catalog__container">
+              <form class="main-catalog__filter" action="https://echo.htmlacademy.ru/" method="post">
+                <fieldset class="main-catalog__price">
+                  <legend class="main-catalog__title">Цена</legend>
+                  <div class="main-catalog__range">
+                    <div class="main-catalog__inputs">
+                      <label class="main-catalog__label">
+                        <input class="main-catalog__input" type="number" value="0" name="min-price">
+                      </label>
+                      <span class="main-catalog__span">–</span>
+                      <label class="main-catalog__label">
+                        <input class="main-catalog__input" type="number" value="900" name="max-price">
+                      </label>
+                    </div>
+                  </div>
+                  <div class="main-catalog__scales">
+                    <div class="main-catalog__scale">
+                      <div class="main-catalog__range-bar">
+                        <button class="main-catalog__toggle main-catalog__toggle--min" type="button">
+                          <span class="visually-hidden">Изменить минимальную цену</span>
+                        </button>
+                        <button class="main-catalog__toggle main-catalog__toggle--max" type="button">
+                          <span class="visually-hidden">Изменить максимальную цену</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+                <fieldset class="main-catalog__price">
+                  <legend class="main-catalog__title">Наличие молока</legend>
+                  <ul class="main-catalog__list main-catalog__list--milk">
+                    <li class="main-catalog__item">
+                      <label class="main-catalog__control">
+                        <input class="visually-hidden main-catalog__control-input" type="radio" name="milk-type" value="nevermind" checked="checked">
+                        <span class="main-catalog__control-mark  main-catalog__control-mark--radio"></span>
+                        <span class="main-catalog__control-label">Неважно</span>
+                      </label>
+                    </li>
+                    <li class="main-catalog__item">
+                      <label class="main-catalog__control">
+                        <input class="visually-hidden main-catalog__control-input" type="radio" name="milk-type" value="animal-milk">
+                        <span class="main-catalog__control-mark  main-catalog__control-mark--radio"></span>
+                        <span class="main-catalog__control-label">Только животное</span>
+                      </label>
+                    </li>
+                    <li class="main-catalog__item">
+                      <label class="main-catalog__control">
+                        <input class="visually-hidden main-catalog__control-input" type="radio" name="milk-type" value="vegetable-milk">
+                        <span class="main-catalog__control-mark  main-catalog__control-mark--radio"></span>
+                        <span class="main-catalog__control-label">Только растительное</span>
+                      </label>
+                    </li>
+                    <li class="main-catalog__item">
+                      <label class="main-catalog__control">
+                        <input class="visually-hidden main-catalog__control-input" type="radio" name="milk-type" value="no-milk" disabled>
+                        <span class="main-catalog__control-mark  main-catalog__control-mark--radio"></span>
+                        <span class="main-catalog__control-label">Без молока</span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <fieldset class="main-catalog__coffee">
+                  <legend class="main-catalog__title">Страна произрастания</legend>
+                  <ul class="main-catalog__list main-catalog__list--coffee">
+                    <li class="main-catalog__item">
+                      <label class="main-catalog__control">
+                        <input class="visually-hidden main-catalog__control-input" type="checkbox" name="beans-type" checked="checked">
+                        <span class="main-catalog__control-mark main-catalog__control-mark--check"></span>
+                        <span class="main-catalog__control-label">Бразилия</span>
+                      </label>
+                    </li>
+                    <li class="main-catalog__item">
+                      <label class="main-catalog__control">
+                        <input class="visually-hidden main-catalog__control-input" type="checkbox" name="beans-type">
+                        <span class="main-catalog__control-mark main-catalog__control-mark--check"></span>
+                        <span class="main-catalog__control-label">Эфиопия</span>
+                      </label>
+                    </li>
+                    <li class="main-catalog__item">
+                      <label class="main-catalog__control">
+                        <input class="visually-hidden main-catalog__control-input" type="checkbox" name="beans-type">
+                        <span class="main-catalog__control-mark main-catalog__control-mark--check"></span>
+                        <span class="main-catalog__control-label">Колумбия</span>
+                      </label>
+                    </li>
+                    <li class="main-catalog__item">
+                      <label class="main-catalog__control">
+                        <input class="visually-hidden main-catalog__control-input" type="checkbox" name="beans-type">
+                        <span class="main-catalog__control-mark main-catalog__control-mark--check"></span>
+                        <span class="main-catalog__control-label">Коста-Рика</span>
+                      </label>
+                    </li>
+                    <li class="main-catalog__item">
+                      <label class="main-catalog__control">
+                        <input class="visually-hidden main-catalog__control-input" type="checkbox" name="beans-type" disabled>
+                        <span class="main-catalog__control-mark main-catalog__control-mark--check"></span>
+                        <span class="main-catalog__control-label">Перу</span>
+                      </label>
+                    </li>
+                  </ul>
+                  <button class="main-catalog__button" type="reset">
+                    <span class="main-catalog__button-text">Сбросить фильтр</span>
+                  </button>
+                </fieldset>
+              </form>
+              <div class="main-catalog__products">
+                <form class="main-catalog__sort" action="https://echo.htmlacademy.ru/" method="post">
+                  <fieldset class="main-catalog__group">
+                    <legend class="main-catalog__title">Сортировка:</legend>
+                    <select class="main-catalog__select-control" name="sorting">
+                      <option value="by-default">по умолчанию</option>
+                      <option value="expensive-first">сначала дорогие</option>
+                      <option value="high-ranked">высокий рейтинг</option>
+                    </select>
+                  </fieldset>
+                </form>
+                <!-- Сюда начинаем вставлять список -->
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <script src="js/script.js"></script>
+    </body>
+
+  </html>
+
+  <!-- Доработать навигацию: ссылки-слова -->
