@@ -15,7 +15,18 @@
       <header class="page-header">
         <div class="page-header--wrapper">
           <a class="page-header__link" href="#" aria-label="На главную страницу">
-          <!-- Здесь вставить несколько .svg по спрайту и соответствующим классам в зависимости от --visible-устройство -->
+            <!-- ПЕРЕНЕСЕНО В СПРАЙТ -->
+            <svg class="page-header__logo page-header__logo--visible-phone" width="86" height="35">
+              <use href="img/sprite.svg#logo-mobile"></use>
+            </svg>
+            <!-- ПЕРЕНЕСЕНО В СПРАЙТ -->
+            <svg class="page-header__logo page-header__logo--visible-tablet" width="114" height="46">
+              <use href="img/sprite.svg#logo-tablet"></use>
+            </svg>
+            <!-- ПЕРЕНЕСЕНО В СПРАЙТ -->
+            <svg class="page-header__logo page-header__logo--visible-desktop" width="149" height="72">
+              <use href="img/sprite.svg#logo-desktop"></use>
+            </svg>
           </a> 
           <!-- Можно добавить класс page-nav--closed -->
           <!-- Можно добавить класс page-nav--opened -->
@@ -105,7 +116,7 @@
                 <span class="visually-hidden">Следующий напиток</span>
                 <!-- Вставить спрайтом .svg -->
               </button>
-              <ul class="main-header__switchers">
+              <ol class="main-header__switchers">
                 <li class="main-header__switch">
                   <span class="visually-hidden">Первый</span>
                 </li>
@@ -115,7 +126,7 @@
                 <li class="main-header__switch">
                   <span class="visually-hidden">Третий</span>
                 </li>
-              </ul>
+              </ol>
             </p>
           </div>
         </section>
@@ -149,7 +160,7 @@
           <div class="main-catalog__wrapper">
             <h2 class="main-catalog__title main-title">Каталог</h2>
             <p class="main-catalog__header main-attention">Каталог кофейных напитков</p>
-            <div class="main-catalog__container">
+            <div class="main-catalog__filter-container">
               <form class="main-catalog__filter" action="https://echo.htmlacademy.ru/" method="post">
                 <fieldset class="main-catalog__price">
                   <legend class="main-catalog__title">Цена</legend>
@@ -254,6 +265,8 @@
                   </button>
                 </fieldset>
               </form>
+            </div>
+            <div class="main-catalog__products-container">
               <div class="main-catalog__products">
                 <form class="main-catalog__sort" action="https://echo.htmlacademy.ru/" method="post">
                   <fieldset class="main-catalog__group">
@@ -265,15 +278,96 @@
                     </select>
                   </fieldset>
                 </form>
-                <!-- Сюда начинаем вставлять список -->
+                <div class="main-catalog__product-group">
+                  <article class="main-catalog__product-card">
+                    <div class="main-catalog__product-image">
+                      <a href="#">
+                        <picture>
+                          <source type="image/webp" srcset="img/beverages/coffee_can_1@1x.webp, img/beverages/coffee_can_1@2x.webp 2x">
+                          <img src="img/beverages/coffee_can_1@1x.png" srcset="img/beverages/coffee_can_1@2x.png" alt="Декаф Флэт Уайт">
+                        </picture>
+                      </a>
+                    </div>
+                    <div class="main-catalog__product-content">
+                      <ul class="main-catalog__product-list">
+                        <li class="main-catalog__product-title">
+                          Декаф Флэт Уайт
+                        </li>
+                        <li class="main-catalog__product-description">Кофе без кофеина из Эфиопии
+                          с натуральным фермерским молоком
+                        </li>
+                        <li class="main-catalog__product-price">
+                          225₽
+                        </li>
+                        <li class="main-catalog__product-buy">
+                          <button class="main-catalog__buy-button" type="button">
+                            <svg width="20" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.67 13.52v-.02h1.35l-.03.21A2.67 2.67 0 0 1 12.35 16h-8.7A2.67 2.67 0 0 1 1 13.71L.19 8 0 6.67h4.55l-.22-2.68A3.68 3.68 0 0 1 11.62 3h-1.37a2.35 2.35 0 0 0-4.59.88l.23 2.79H9.5V8H6.06l.22 2.67h3.44l.01-.17h1.34l-.01.17h1.44V12h-1.55l-.23 2.67h1.63c.67 0 1.23-.5 1.32-1.15ZM4.72 8H1.54l.38 2.67h3.02L4.72 8Zm1.9 6.67L6.38 12H9.6l-.22 2.67H6.6ZM5.04 12l.23 2.67H3.65c-.67 0-1.23-.5-1.32-1.15L2.1 12h2.94Zm10.75-2V7.2H13V5.8h2.8V3h1.4v2.8H20v1.4h-2.8V10h-1.4Z" fill="#fff"/>
+                            </svg>
+                            <span class="main-catalog__buy-text">В корзину</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </article>
+                  <!-- Вставить еще 5 карточек -->
+                </div>
+                <ol class="main-pagination">
+                  <li class="main-pagination__item">
+                    <button class="main-pagination__button" type="button">
+                      <span class="main-pagination__text">Назад</span>
+                    </button>
+                  </li>
+                  <li class="main-pagination__item">
+                    <button class="main-pagination__button" type="button">
+                      <span class="main-pagination__text">1</span>
+                    </button>
+                  </li>
+                  <li class="main-pagination__item">
+                    <button class="main-pagination__button main-pagination__button--current" type="button">
+                      <span class="main-pagination__text">2</span>
+                    </button>
+                  </li>
+                  <li class="main-pagination__item">
+                    <button class="main-pagination__button" type="button">
+                      <span class="main-pagination__text">3</span>
+                    </button>
+                  </li>
+                  <li class="main-pagination__item">
+                    <button class="main-pagination__button" type="button">
+                      <span class="main-pagination__text">Вперед</span>
+                    </button>
+                  </li>
+                </ol>
               </div>
             </div>
           </div>
         </section>
+
+        <section class="main-map">
+          <div class="main-map__wrapper">
+            <svg width="38" height="50" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="19" cy="48.5" rx="8" ry="1.5" fill="#7859CF" fill-opacity=".25"/><path d="M38 20c0 15.05-19 24-19 24S0 35.05 0 20C0 8.95 8.5 0 19 0s19 8.95 19 20Z" fill="#7859CF"/><path fill-rule="evenodd" clip-rule="evenodd" d="M19 36c8.28 0 15-7.16 15-16S27.28 4 19 4C10.72 4 4 11.16 4 20s6.72 16 15 16Zm9.86-10.67C29.59 23.73 30 21.92 30 20c0-6.63-4.92-12-11-12-.85 0-1.67.1-2.46.3 3.8 1 6.59 4.37 6.59 8.37 0 3.1-1.75 6.15-3.44 8.66h9.17ZM14.19 10.67a6.1 6.1 0 0 1 6.19 6c0 3.8-3.02 7.46-5.44 10.4l-.75.93h13A10.6 10.6 0 0 1 19 32c-6.08 0-11-5.37-11-12 0-3.66 1.62-9.33 6.19-9.33Z" fill="#fff"/>
+            </svg>
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/map_desktop@1x.webp, img/map_desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/map_tablet@1x.webp, img/map_tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/map_mobile@1x.webp, img/map_mobile@2x.webp 2x">
+
+              <source media="(min-width: 1440px)" srcset="img/map_desktop@1x.png, img/map_desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/map_tablet@1x.png, img/map_tablet@2x.png 2x">
+              <img src="img/map_mobile@1x.png" srcset="img/map_mobile@2x.png" alt="Местонахождение магазина">
+            </picture>
+          </div>
+        </section>
       </main>
+
+      <footer class="page-footer">
+        <div class="page-footer__wrapper">
+          
+        </div>
+      </footer>
       <script src="js/script.js"></script>
     </body>
 
   </html>
 
-  <!-- Доработать навигацию: ссылки-слова -->
+  <!-- Доработать reset-list -->
